@@ -170,56 +170,40 @@
    HEADER – NON OVERLAY, WHITE, STICKY
 ====================================================== */
 
-/* Force header to be solid white always */
+/* Restore global header behavior – STATIC */
 .site-header {
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  padding: 14px 0;
+  position: absolute;
+  top: 34px;
+  background: transparent;
+  box-shadow: none;
+  padding: 18px 0;
 }
 
 /* Disable transparent behavior */
-.transparent-header {
+/* Disable transparent behavior - Removed to match other pages */
+/* .transparent-header {
   background: #ffffff !important;
-}
+} */
 
 /* Remove offset caused by top bar */
-.site-header,
-.site-header.scrolled {
-  top: 0;
-}
+/* Removed top: 0 override to allow top-bar space */
 
 /* Ensure hero does not hide under header */
  
 
 /* Logo size consistency */
-.site-header .site-logo img {
+/* Logo size consistency - Removed to allow global.css (120px) to take over */
+/* .site-header .site-logo img {
   height: 44px;
-}
+} */
 
-/* =============================
-   BUTTONS – ROUNDED CORNERS
-============================= */
-
-/* Global button rounding */
-.btn,
+/* Buttons – Removed rounded corners to match other pages */
+/* .btn,
 .call-btn {
   border-radius: 8px; 
-}
+} */
 
-/* Slightly more premium feel */
-.btn-primary,
-.btn-outline,
-.btn-gold {
-   
-}
-
-/* Header call button refinement */
-.call-btn {
-  font-size: 14px;
-  padding: 10px 22px;
-}
+/* Header – Removed padding/font override */
 
 /* =============================
    HERO BUTTON VISIBILITY FIX
@@ -281,14 +265,9 @@
     padding-top: 90px;
   }
 
-  .site-header .site-logo img {
-    height: 38px;
-  }
+/* Removed mobile logo override to allow global.css to take over */
 
-  .btn,
-  .call-btn {
-    border-radius: 6px;
-  }
+/* Removed mobile button refinement */
 }
 
 

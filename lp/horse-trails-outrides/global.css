@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
    Header (Shared)
 ----------------------- */
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 34px;
   width: 100%;
   z-index: 1000;
@@ -246,6 +246,10 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
   color: var(--brand-light);
   text-align: center;
   padding: 110px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .cta-overlay {

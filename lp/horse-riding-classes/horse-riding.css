@@ -104,7 +104,7 @@ p {
 
 /* ================= HEADER ================= */
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 34px; /* height of top bar */
   width: 100%;
   z-index: 1000;
