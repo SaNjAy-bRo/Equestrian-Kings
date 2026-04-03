@@ -53,7 +53,7 @@ p {
 }
 
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 34px;
   transition: all 0.35s ease;
 }
@@ -104,7 +104,7 @@ p {
 
 /* ================= HEADER ================= */
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 34px; /* height of top bar */
   width: 100%;
   z-index: 1000;
@@ -139,14 +139,10 @@ p {
 }
 
 /* Phone color when scrolled */
-.site-header.scrolled .header-call a {
-  color: #11281a;
-}
+
 
 /* Smaller logo on scroll */
-.site-header.scrolled .site-logo img {
-  height: 65px;
-}
+
 
 @media (max-width: 768px) {
   .site-header {
@@ -208,15 +204,9 @@ p {
 }
 
 /* When header becomes solid */
-.site-header.scrolled .call-btn {
-  border-color: #11281a;
-  color: #11281a;
-}
 
-.site-header.scrolled .call-btn:hover {
-  background: #11281a;
-  color: #ffffff;
-}
+
+
 
 /* ================= GOLD PRIMARY CTA ================= */
 
@@ -1121,7 +1111,7 @@ blockquote {
 /* ================= MOBILE STICKY FOOTER ================= */
 
 .mobile-sticky-footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1428,19 +1418,10 @@ blockquote {
 }
 
 /* When header is sticky */
-.site-header.scrolled .call-btn {
-  background: #11281a;              /* brand dark */
-  color: #ffffff !important;
-  border-color: #11281a;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-}
+
 
 /* Hover refinement */
-.site-header.scrolled .call-btn:hover {
-  background: #0d1f15;
-  border-color: #0d1f15;
-}
+
 
  
 
@@ -1860,3 +1841,35 @@ blockquote {
 }
 
 
+
+/* Upgraded Hero Links to Buttons */
+.hero-link, .hero-phone {
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--brand-light, #eef3f0) !important;
+  border: 1px solid var(--brand-light, #eef3f0) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.hero-link:hover, .hero-phone:hover {
+  background: var(--brand-gold, #c19558);
+  color: var(--brand-dark, #11281a) !important;
+  border-color: var(--brand-gold, #c19558) !important;
+}
+.hero-link.whatsapp {
+  border-color: #25D366 !important;
+  color: #25D366 !important;
+}
+.hero-link.whatsapp:hover {
+  background: #25D366 !important;
+  color: #fff !important;
+}
+/* Ensure cards stretch properly */
+.row { display: flex; flex-wrap: wrap; }
+.card-premium, .horse-card { height: 100% !important; display: flex; flex-direction: column; }
+.card-premium > *:last-child, .horse-card > *:last-child { margin-top: auto; }

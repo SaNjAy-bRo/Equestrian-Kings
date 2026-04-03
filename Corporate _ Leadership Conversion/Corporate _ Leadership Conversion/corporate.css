@@ -1,0 +1,724 @@
+/* ===============================
+   Header Action Buttons
+================================ */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Base button style */
+.header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-dark);
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  border-radius: 22px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Icon */
+.header-btn i {
+  font-size: 15px;
+}
+
+/* Hover */
+.header-btn:hover {
+  background: var(--brand-light);
+  border-color: var(--brand-dark);
+  color: var(--brand-dark);
+}
+
+/* WhatsApp variant */
+.header-btn.whatsapp {
+  color: #25D366;
+  border-color: rgba(37, 211, 102, 0.4);
+}
+
+.header-btn.whatsapp:hover {
+  background: rgba(37, 211, 102, 0.08);
+  border-color: #25D366;
+}
+
+/* Enquire (primary) */
+.header-btn.enquire {
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  border-color: var(--brand-gold);
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-btn span {
+    display: none; /* icons only */
+  }
+
+  .header-btn {
+    padding: 10px 12px;
+    border-radius: 50%;
+  }
+
+  .header-btn.enquire {
+    display: none !important;
+  }
+}
+
+
+/* ===============================
+   Corporate Header
+================================ */
+
+.corporate-header {
+  background: var(--brand-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.corporate-header.scrolled {
+  background: var(--brand-dark) !important;
+}
+
+/* Ensure SVG logo appears correctly on dark green background */
+.corporate-header .site-logo img {
+  max-width: 160px;
+}
+
+.corporate-header .header-btn:not(.enquire) {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.corporate-header .header-btn:not(.enquire):hover {
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  border-color: var(--brand-gold);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-link {
+  font-size: 14.5px;
+  color: var(--brand-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-link.whatsapp {
+  color: #25D366;
+}
+/* ===============================
+   Clean Corporate Hero
+================================ */
+
+.corporate-hero-clean {
+  padding: 40px 0;
+  background: #ffffff;
+}
+
+.hero-title {
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--brand-dark);
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  max-width: 520px;
+}
+
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.hero-points li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--brand-dark);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.hero-text-link {
+  font-size: 15px;
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
+
+/* Hero Phone Button */
+.hero-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-dark);
+  background: transparent;
+  border: 1px solid var(--brand-dark);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: var(--transition-base);
+}
+
+.hero-phone:hover {
+  background: var(--brand-dark);
+  color: #fff;
+}
+
+.hero-image {
+  border-radius: 4px;
+}
+
+/* ===============================
+   Hero Heading (Full Width)
+================================ */
+
+.hero-heading {
+  max-width: 920px;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 46px;
+  line-height: 1.15;
+  color: var(--brand-dark);
+}
+ 
+ 
+/* ===============================
+   Hero Points with Ticks
+================================ */
+
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 38px;
+}
+
+.hero-points li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: var(--brand-dark);
+}
+
+/* Tick icon */
+.hero-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--brand-gold);
+  font-weight: 700;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+
+  .hero-heading {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+ 
+/* ===============================
+   Benefits Section
+================================ */
+
+.benefits-section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.benefit-card {
+  text-align: center;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--brand-gold);
+  font-size: 26px;
+}
+
+.benefit-card h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--brand-dark);
+}
+
+.benefit-card p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+
+.why-horses-footnote {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15.5px;
+  color: var(--text-muted);
+}
+
+
+/* ===============================
+   EAL Explainer Section
+================================ */
+
+.section-soft {
+  background: #f5f8f6; /* subtle contrast from white */
+  padding: 110px 0;
+}
+
+.eal-anchor {
+  position: sticky;
+  top: 120px;
+}
+
+.eal-label {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  margin-bottom: 14px;
+}
+
+.eal-title {
+  font-size: 34px;
+  line-height: 1.25;
+  color: var(--brand-dark);
+}
+
+.eal-content p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .eal-anchor {
+    position: static;
+  }
+
+  .eal-title {
+    font-size: 28px;
+  }
+}
+
+
+
+/* ===============================
+   Program Outcomes
+================================ */
+
+.outcomes-section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.outcome-card {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  padding: 36px 32px;
+  height: 100%;
+  position: relative;
+}
+
+.outcome-label {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  margin-bottom: 10px;
+}
+
+.outcome-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--brand-dark);
+}
+
+.outcome-card p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+
+/* ===============================
+   Program CTA (Light)
+================================ */
+
+.cta-light {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.cta-box {
+  border: 1px solid var(--border-soft);
+  padding: 48px 44px;
+}
+
+.cta-title-small {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--brand-dark);
+  margin-bottom: 10px;
+}
+
+.cta-text {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+
+/* ===============================
+   Learning Journey Section
+================================ */
+
+.learning-journey {
+  padding-top: 50px;
+  padding-bottom: 110px;
+}
+
+.journey-step {
+  border: 1px solid var(--border-soft);
+  padding: 34px 28px;
+  height: 100%;
+  position: relative;
+  background: #ffffff;
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  color: var(--brand-gold);
+  margin-bottom: 10px;
+}
+
+.journey-step h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: var(--brand-dark);
+}
+
+.journey-step p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   Effectiveness Section
+================================ */
+
+.effectiveness-section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.effectiveness-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1.25;
+  color: var(--brand-dark);
+}
+
+.effectiveness-text {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .effectiveness-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ===============================
+   Final CTA
+================================ */
+
+.final-cta {
+  padding: 120px 0;
+  position: relative;
+  text-align: center;
+}
+
+.final-cta .cta-title {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.final-cta .cta-subtitle {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-light);
+  background: transparent;
+  border: 1px solid rgba(238,243,240,0.5);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: var(--transition-base);
+}
+
+.cta-phone:hover {
+  background: rgba(238,243,240,0.15);
+  border-color: var(--brand-light);
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 90px 0;
+  }
+
+  .cta-phone {
+    font-size: 16px;
+  }
+}
+
+
+/* ===============================
+   Corporate Footer
+================================ */
+
+.corporate-footer {
+  background: var(--brand-dark);
+  color: rgba(238,243,240,0.8);
+  padding: 80px 0 40px;
+  font-size: 14.5px;
+}
+
+.footer-logo {
+  max-height: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-desc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(238,243,240,0.7);
+  max-width: 380px;
+}
+
+/* Titles */
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+/* Lists */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  color: rgba(238,243,240,0.7);
+}
+
+/* Links */
+.footer-link {
+  display: block;
+  color: var(--brand-gold);
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-link.whatsapp {
+  color: #25D366;
+}
+
+/* Footer button */
+.footer-btn {
+  margin-top: 16px;
+  padding: 12px 26px;
+}
+
+/* Location */
+.footer-location {
+  margin-top: 18px;
+  font-size: 13.5px;
+  color: rgba(238,243,240,0.6);
+}
+
+/* Divider */
+.footer-divider {
+  border-color: rgba(238,243,240,0.15);
+  margin: 40px 0 20px;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(238,243,240,0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .corporate-footer {
+    text-align: center;
+  }
+
+  .footer-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-btn {
+    width: 100%;
+  }
+}
+
+
+/* ===============================
+   Location Section
+================================ */
+
+.location-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.location-intro {
+  font-size: 16.5px;
+  line-height: 1.7;
+  max-width: 420px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* Address */
+.location-address {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--brand-dark);
+  margin-bottom: 18px;
+}
+
+/* Map link */
+.location-link {
+  display: inline-block;
+  font-size: 14.5px;
+  color: var(--brand-gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(193,149,88,0.4);
+}
+
+.location-link:hover {
+  border-color: var(--brand-gold);
+}
+
+/* Map frame */
+.map-frame {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  border: 1px solid rgba(17,40,26,0.12);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .location-section {
+    text-align: center;
+  }
+
+  .location-intro,
+  .location-address {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}
+

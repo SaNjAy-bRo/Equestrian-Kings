@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 /* ================= HEADER LOGO ================= */
 
 .site-logo img {
-  height: 120px;
+  height: 120px;           /* significantly larger as requested */
   width: auto;
   transition: all 0.3s ease;
 }
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 /* Mobile refinement */
 @media (max-width: 768px) {
   .site-logo img {
-    height: 100px;
+    height: 100px; /* maximum visibility for mobile as requested */
   }
 
   
@@ -103,23 +103,22 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 
 .call-btn {
   padding: 10px 20px;
-  background: var(--brand-gold);
-  color: var(--brand-dark);
-  border: 1px solid var(--brand-gold);
+  background: var(--brand-dark);   /* 👈 dark background */
+  color: #ffffff;                  /* 👈 white text */
+  border: 1px solid var(--brand-dark);
   text-decoration: none;
   font-size: 14px;
-  font-weight: 600;
   transition: var(--transition-base);
 }
 
 /* Hover */
 .call-btn:hover {
-  background: var(--brand-dark);
+  background: var(--brand-dark-2);
   color: #ffffff;
-  border-color: var(--brand-dark);
+  border-color: var(--brand-dark-2);
 }
 
-/* When header is scrolled */
+/* When header is scrolled (keep same style for consistency) */
 
 
 
@@ -172,8 +171,7 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 
 
 .transparent-header .call-btn {
-  background: var(--brand-gold);
-  color: var(--brand-dark);
+  background: rgba(17,40,26,0.9);
 }
 
 /* -----------------------
@@ -190,12 +188,10 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 
 .site-header.scrolled {
   top: 0;
-  background: var(--brand-dark);
+  background: #fff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   padding: 12px 0;
 }
-
-
 
 /* Call Button */
  
@@ -312,7 +308,6 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
   letter-spacing: 0.6px;
   position: relative;
   z-index: 1100;
-  font-weight: 600;
 }
 
 /* Ensure header sits below top bar */
