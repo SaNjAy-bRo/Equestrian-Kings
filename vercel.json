@@ -1,1 +1,11 @@
-{"redirects": [{"source": "/", "destination": "/lp/corporate-leadership", "permanent": false}]}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/lp/corporate-leadership",
+      "permanent": false
+    }
+  ]
+}
