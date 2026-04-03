@@ -80,24 +80,24 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 /* ================= HEADER LOGO ================= */
 
 .site-logo img {
-  height: 80px;           /* default size */
+  height: 120px;           /* significantly larger as requested */
   width: auto;
   transition: all 0.3s ease;
 }
 
 /* On scroll (sticky state) */
 .site-header.scrolled .site-logo img {
-  height: 40px;
+  height: 65px;
 }
 
 /* Mobile refinement */
 @media (max-width: 768px) {
   .site-logo img {
-    height: 40px;
+    height: 100px; /* maximum visibility for mobile as requested */
   }
 
   .site-header.scrolled .site-logo img {
-    height: 34px;
+    height: 75px;
   }
 }
 
@@ -308,8 +308,8 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 
 /* ================= TOP BAR ================= */
 .top-bar {
-  background: var(--brand-dark);
-  color: var(--brand-light);
+  background: var(--brand-gold);
+  color: var(--brand-dark);
   text-align: center;
   font-size: 13px;
   padding: 8px 12px;

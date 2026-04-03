@@ -55,14 +55,7 @@
   border-color: var(--brand-gold);
 }
 
-.header-btn.enquire:hover {
-  background: var(--brand-dark);
-  color: #fff;
-  border-color: var(--brand-dark);
-}
-
 @media (max-width: 768px) {
-
   .header-actions {
     gap: 8px;
   }
@@ -75,6 +68,10 @@
     padding: 10px 12px;
     border-radius: 50%;
   }
+
+  .header-btn.enquire {
+    display: none !important;
+  }
 }
 
 
@@ -83,11 +80,32 @@
 ================================ */
 
 .corporate-header {
-  background: #ffffff;
+  background: var(--brand-dark);
   position: sticky;
   top: 0;
   z-index: 1200;
-  border-bottom: 1px solid var(--border-soft);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.corporate-header.scrolled {
+  background: var(--brand-dark) !important;
+}
+
+/* Ensure SVG logo appears correctly on dark green background */
+.corporate-header .site-logo img {
+  max-width: 160px;
+}
+
+.corporate-header .header-btn:not(.enquire) {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.corporate-header .header-btn:not(.enquire):hover {
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  border-color: var(--brand-gold);
 }
 
 .header-actions {
@@ -543,7 +561,7 @@
 }
 
 .footer-logo {
-  max-height: 54px;
+  max-height: 80px;
   margin-bottom: 20px;
 }
 
