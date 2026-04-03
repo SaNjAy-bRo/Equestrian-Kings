@@ -1,0 +1,347 @@
+/* =====================================
+   Kingsfarm Social – Venue Landing
+===================================== */
+
+/* HERO */
+/* Landing hero – not full screen */
+.hero-social {
+  min-height: 68vh;          /* 👈 key change */
+  padding-top: 160px;        /* accounts for top bar + header */
+  padding-bottom: 120px;
+  display: block;            /* ❌ remove flex centering */
+}
+
+
+.cta-overlay2 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(53,38,32,0.285),
+    rgba(53,38,32,0.475),
+    rgba(53,38,32,0.85)
+  );
+  z-index: 1;
+}
+
+
+/* ================= HERO BACKGROUND FIX ================= */
+
+.hero-social {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* ================= HERO CONTENT PANEL ================= */
+
+.hero-content-panel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  background: rgba(53, 38, 32, 0.55); /* 👈 soft dark overlay */
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+  .hero-content-panel {
+    padding: 36px 24px;
+  }
+}
+
+
+
+
+/* EVENT ICON GRID */
+.event-card h4 {
+  margin-bottom: 10px;
+}
+
+/* ADDONS */
+.addon-card {
+  text-align: center;
+}
+
+/* GALLERY */
+.social-gallery img,
+.social-gallery video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LOCATION MAP */
+.map-frame {
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* MODAL */
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-family: 'Bodoni Moda', serif;
+}
+
+.modal-body label {
+  font-size: 14px;
+}
+
+
+/* HERO – center content vertically */
+.hero-social .cta-content {
+  margin-top: 0;
+} 
+
+@media (max-width: 768px) {
+  .hero-social {
+    min-height: auto;
+    padding-top: 140px;
+    padding-bottom: 90px;
+  }
+}
+
+.hero-social::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: rgba(241,234,225,0.4);
+  margin: 60px auto 0;
+}
+
+/* Hero outline button – visible on dark background */
+.btn-hero-light {
+  border-color: rgba(241,234,225,0.9);
+  color: #f1eae1;
+  background: transparent;
+}
+
+.btn-hero-light:hover {
+  background: #f1eae1;
+  color: #352620;
+  border-color: #f1eae1;
+}
+
+
+
+/* ================= EVENT CARDS – FULL BLEED IMAGE ================= */
+
+/* Wrapper controls total height */
+.event-card-wrapper {
+  height: 320px;              /* total card height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-width image (no padding, no border) */
+.event-image-full {
+  height: 180px;
+  overflow: hidden;
+}
+
+.event-image-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content card (premium frame only for text) */
+.event-card-content {
+  flex: 1;
+  padding: 26px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography balance */
+.event-card-content h4 {
+  margin-bottom: 10px;
+}
+
+.event-card-content p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Hover refinement */
+@media (hover: hover) {
+  .event-card-wrapper:hover img {
+    transform: scale(1.04);
+    transition: transform 0.4s ease;
+  }
+}
+ 
+ 
+@media (max-width: 768px) {
+  .event-card-wrapper {
+    height: auto;
+  }
+
+  .event-image-full {
+    height: 200px;
+  }
+}
+ 
+ 
+ 
+.map-frame {
+  border: 1px solid rgba(53, 38, 32, 0.12);
+}
+ 
+ 
+
+/* ================= GALLERY ================= */
+
+.gallery-section {
+  padding: 110px 0;
+}
+
+.gallery-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #7d534b;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border: 1px solid rgba(53, 38, 32, 0.12);
+}
+
+/* ================= GALLERY VIDEO – FIXED 9:16 ================= */
+
+.gallery-item.video-portrait {
+  aspect-ratio: 9 / 16;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Kill any inherited height issues */
+.gallery-item.video-portrait video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* THIS is the key */
+  object-position: center;
+  display: block;
+}
+ 
+ 
+/* ================= FOOTER ENHANCEMENTS ================= */
+
+.footer-logo {
+  max-height: 56px;
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--brand-light);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  font-size: 14px;
+  color: rgba(241,234,225,0.75);
+  margin-bottom: 8px;
+}
+
+.footer-contact-block a {
+  color: var(--brand-gold);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-contact-block a:hover {
+  text-decoration: underline;
+}
+
+.brand-tagline {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(241,234,225,0.75);
+}
+ 
+ 
+ 
+/* ===============================
+   Location Section
+================================ */
+
+.location-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.location-intro {
+  font-size: 16.5px;
+  line-height: 1.7;
+  max-width: 420px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* Address */
+.location-address {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--brand-dark);
+  margin-bottom: 18px;
+}
+
+/* Map link */
+.location-link {
+  display: inline-block;
+  font-size: 14.5px;
+  color: var(--brand-gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(198,161,91,0.4);
+}
+
+.location-link:hover {
+  border-color: var(--brand-gold);
+}
+
+/* Map frame */
+.map-frame {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  border: 1px solid rgba(53,38,32,0.12);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .location-section {
+    text-align: center;
+  }
+
+  .location-intro,
+  .location-address {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}
+ 
