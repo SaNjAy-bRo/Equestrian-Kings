@@ -171,12 +171,14 @@
 ====================================================== */
 
 /* Restore global header behavior – STATIC */
-.site-header {
-  position: absolute;
-  top: 34px;
-  background: transparent;
-  box-shadow: none;
-  padding: 18px 0;
+@media (min-width: 769px) {
+  .site-header {
+    position: absolute;
+    top: 34px;
+    background: transparent;
+    box-shadow: none;
+    padding: 18px 0;
+  }
 }
 
 /* Disable transparent behavior */
@@ -261,9 +263,7 @@
 
 @media (max-width: 768px) {
 
-  body {
-    padding-top: 90px;
-  }
+  /* Removed mobile body padding that was pushing the whole page down */
 
 /* Removed mobile logo override to allow global.css to take over */
 

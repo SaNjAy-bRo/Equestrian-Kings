@@ -86,15 +86,35 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 }
 
 /* On scroll (sticky state) */
-
+.site-header.scrolled .site-logo img {
+  height: 65px;
+}
 
 /* Mobile refinement */
 @media (max-width: 768px) {
-  .site-logo img {
-    height: 100px;
+  .site-header {
+    padding: 10px 0;
   }
 
-  
+  .site-header .container {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .site-logo img {
+    height: 75px;
+  }
+
+  .site-header.scrolled .site-logo img {
+    height: 44px;
+  }
+
+  .header-call .call-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
 }
 
 
@@ -181,7 +201,7 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 ----------------------- */
 .site-header {
   position: absolute;
-  top: 34px;
+  top: auto;
   width: 100%;
   z-index: 1000;
   padding: 18px 0;
@@ -332,12 +352,13 @@ h1, h2, h3, h4, h5, .section-title, .cta-title {
 /* Mobile adjustment */
 @media (max-width: 768px) {
   .top-bar {
-    font-size: 12px;
-    padding: 7px 10px;
+    font-size: 11px;
+    padding: 6px 10px;
+    letter-spacing: 0.3px;
   }
 
   .site-header {
-    top: 40px;
+    top: auto;
   }
 }
 
